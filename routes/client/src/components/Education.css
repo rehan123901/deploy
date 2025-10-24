@@ -1,0 +1,252 @@
+.education {
+  padding: 100px 0;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+}
+
+.education-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  transform-origin: top;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-items {
+  position: relative;
+  z-index: 2;
+}
+
+.education-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 50%;
+}
+
+.education-item.left {
+  left: 0;
+  padding-right: 3rem;
+}
+
+.education-item.right {
+  left: 50%;
+  padding-left: 3rem;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.1);
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+.education-card.current {
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.education-icon {
+  font-size: 1.5rem;
+  color: #7c3aed;
+  padding: 0.75rem;
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 12px;
+}
+
+.education-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #a855f7;
+  padding: 0.25rem 0.75rem;
+  background: rgba(168, 85, 247, 0.1);
+  border-radius: 20px;
+}
+
+.education-content {
+  color: #ffffff;
+}
+
+.education-degree {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.education-institution {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #7c3aed;
+  margin-bottom: 1rem;
+}
+
+.education-period {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.period-icon {
+  color: #7c3aed;
+}
+
+.education-description {
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.education-highlights h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 0.75rem;
+}
+
+.highlights-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.highlight-tag {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(124, 58, 237, 0.2);
+  color: #a855f7;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 2rem;
+  width: 20px;
+  height: 20px;
+  background: #7c3aed;
+  border-radius: 50%;
+  border: 4px solid #0f0f23;
+  z-index: 3;
+}
+
+.education-item.left .timeline-dot {
+  right: -10px;
+}
+
+.education-item.right .timeline-dot {
+  left: -10px;
+}
+
+.dot-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .education {
+    padding: 80px 0;
+  }
+  
+  .education-timeline {
+    padding: 1rem 0;
+  }
+  
+  .timeline-line {
+    left: 20px;
+  }
+  
+  .education-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 3rem !important;
+    padding-right: 0 !important;
+  }
+  
+  .education-item .timeline-dot {
+    left: 10px !important;
+    right: auto !important;
+  }
+  
+  .education-card {
+    padding: 1.5rem;
+  }
+  
+  .education-degree {
+    font-size: 1.25rem;
+  }
+  
+  .education-institution {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-item {
+    padding-left: 2.5rem !important;
+  }
+  
+  .education-card {
+    padding: 1rem;
+  }
+  
+  .education-degree {
+    font-size: 1.1rem;
+  }
+  
+  .education-institution {
+    font-size: 0.95rem;
+  }
+  
+  .education-description {
+    font-size: 0.9rem;
+  }
+  
+  .highlight-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
